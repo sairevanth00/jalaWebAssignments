@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>CSS Effects</title>
+      <style type="text/css">
+            body{
+                margin: 0;
+            }
+            @keyframes example-1 {
+              from {background-color: green;}
+              to {background-color: yellow;}
+            }
+            .para-1 {
+              background-color: red;
+              animation-name: example-1;
+              animation-duration: 4s;
+              padding:20px;
+              font-family: "Roboto";
+              color: #ffffff;
+              position: relative;
+            }
+            @keyframes example-2 {
+              0%   {background-color:red; left:0px; top:0px;}
+              25%  {background-color:yellow; left:100px; top:0px;}
+              50%  {background-color:blue; left:100px; top:100px;}
+              75%  {background-color:green; left:0px; top:100px;}
+              100% {background-color:black; left:0px; top:0px;}
+            }
+            .box{
+              width: 100px;
+              height: 100px;
+              background-color: red;
+              position: relative;
+              animation-name: example-2;
+              animation-duration: 4s;
+              animation-delay: 2s;
+              animation-iteration-count: 3;
+              
+            }
+            .bg-container{
+                background-color: #a6a6a6;
+                height:100%;
+                background-size: cover;
+                margin-top: 0px;
+                display: flex;
+                flex-direction: column;
+                overflow: scroll;
+            }
+            .image-size{
+                height:40%;
+                width:80%;
+                border:10px solid black;
+            }
+            .heading{
+                text-align: center;
+            }
+            .box-container{
+                height: 220px;
+                width:250px;
+            }
+            .image-size:hover{
+                box-shadow: 20px 20px 5px black;
+                opacity: 0.5;
+            }
+            .image-container{
+                width:100vw;
+                display: flex;
+                justify-content: center;
+            }
+            .para-3{
+                position: sticky;
+                font-family: "Roboto";
+                color:blue;
+                background-color: black;
+                padding: 20px;
+            }
+            .para-4{
+                position: static;
+                font-family: "Roboto";
+                background-color: blue;
+                padding: 20px;
+                font-weight: 600;
+            }
+      </style>
+  </head>
+  <body>
+    <div class="bg-container">
+        <h1 class="heading">Shadow Effect</h1>
+        <div class="image-container">
+            <img class="image-size" src="https://res.cloudinary.com/saivarma/image/upload/v1626100465/francesca-hotchin-FN-cedy6NHA-unsplash_nnhg7r.jpg" />
+        </div>
+        <h3>Effect-1</h3>
+        <p class="para-1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc
+            o laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit i
+            n voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi
+            datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>Effect-2</h3>
+        <div class="box-container">
+            <p class="box"></p>
+        </div>
+        <h3>Effect-3</h3>
+        <p class="para-3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc
+            o laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit i
+            n voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi
+            datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>Effect-4</h3>
+        <p class="para-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc
+            o laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit i
+            n voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi
+            datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+  </body>
+</html>

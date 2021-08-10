@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>CSS Effects</title>
+      <style type="text/css">
+      table {
+          border-collapse: collapse;
+          border: 1px solid black;
+        } 
+        th,td {
+          border: 1px solid black;
+          padding:5px;
+        }
+        th{
+            background-color: yellow;
+        }
+        table.a {
+          table-layout: auto;
+          width: 180px;  
+        }
+        
+        table.b {
+          table-layout: fixed;
+          width: 180px;  
+        }
+        table.c{
+          table-layout: none;
+          width: 180px;  
+        }
+        .list-style-types-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .lower-roman {
+            list-style-type: lower-roman;
+        }
+        
+        .upper-roman {
+            list-style-type: upper-roman;
+        }
+        .square {
+            list-style-type: square;
+        }
+        .circle {
+            list-style-type: circle;
+        }
+        .grid-container {
+          display: grid;
+          grid-gap: 10px;
+          background-color: #2196F3;
+          padding: 10px;
+        }
+        .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          text-align: center;
+          padding: 20px;
+          font-size: 30px;
+        }
+        
+        .item1 {
+          grid-column: 1 / span 2;
+          grid-row: 1;
+        }
+        
+        .item2 {
+          grid-column: 3;
+          grid-row: 1 / span 2;
+        }
+        
+        .item5 {
+          grid-column: 1 / span 3;
+          grid-row: 3;
+        }
+        .hero-image {
+          background-image: url("https://res.cloudinary.com/saivarma/image/upload/v1625158699/Saaho_x0qpdd.jpg");
+          height: 280px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+          padding: 20px;
+        }
+        button{
+            border:0px;
+            padding: 10px;
+        }
+        button:hover{
+            background-color: #ff944d;
+            cursor:pointer;
+        }
+        @media screen and (max-width: 992px) {
+          body {
+            background-color: gray;
+          }
+          .hero-image{
+              height: 220px;
+          }
+        }
+      </style>
+  </head>
+  <body>
+    <div class="bg-container">
+        <h1>The table-layout Property</h1>
+
+        <table class="a">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>Country</th>
+            <th>ROLE</th>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+            <td>software</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+            <td>hardware</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>Giovanni Rovelli</td>
+            <td>Australia</td>
+            <td>business</td>
+          </tr>
+        </table>
+        <br/>
+        <h1>The table-layout Property as Fixed</h1>
+        <table class="b">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>Country</th>
+            <th>ROLE</th>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+            <td>software</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+            <td>hardware</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>Giovanni Rovelli</td>
+            <td>Australia</td>
+            <td>business</td>
+          </tr>
+        </table>
+        <h1>The table-layout Property as none</h1>
+        <table class="c">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>Country</th>
+            <th>ROLE</th>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+            <td>software</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+            <td>hardware</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>Giovanni Rovelli</td>
+            <td>Australia</td>
+            <td>business</td>
+          </tr>
+        </table>
+        <h1>LIST STYLE TYPES</h1>
+        <div class="list-style-types-container">
+            <div>
+        <h4>Hobbies</h4>
+    <ul class="square">
+        <li>abcd</li>
+        <li>efgh</li>
+        <li>ijkl</li>
+    </ul>
+    </div>
+    
+    <div>
+        <h4>Games</h4>
+        <ul class="circle">
+            <li>abcd</li>
+            <li>efgh</li>
+            <li>ijkl</li>
+        </ul>
+    </div>
+    
+    <div>
+        <h4>Subjects</h4>
+        <ol class="lower-roman">
+            <li>abcd</li>
+            <li>efgh</li>
+            <li>ijkl</li>
+        </ol>
+    </div>
+    <div>
+        <h4>Engineering Branches</h4>
+        <ol class="upper-roman">
+            <li>abcd</li>
+            <li>efgh</li>
+            <li>ijkl</li>
+        </ol>
+    </div>
+        </div>
+        
+        <h1>Grid Layout:</h1>
+
+        <div class="grid-container">
+          <div class="grid-item item1">1</div>
+          <div class="grid-item item2">2</div>
+          <div class="grid-item item3">3</div>  
+          <div class="grid-item item4">4</div>
+          <div class="grid-item item5">5</div>
+        </div>
+        <br/>
+        <div class="hero-image">
+          <div class="hero-text">
+            <h1 style="font-size:50px">I am John Doe</h1>
+            <p>And I'm a HERO</p>
+            <button>Hire me</button>
+          </div>
+        </div>
+    </div>
+    
+  </body>
+</html>

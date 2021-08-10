@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .heading {
+      color: blue;
+      font-family: "Caveat";
+      font-size: 40px;
+      text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+  <script type="text/javascript">
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //This example uses a single line comment at the end of each line to explain the code:
+    let x = 5;      // Declare x, give it the value of 5
+    let y = x + 2;  // Declare y, give it the value of x + 2
+    //This example uses a Multi line comment at the starting to explain the code:
+    /*
+    The code below will change
+    the heading with id = "myH"
+    and the paragraph with id = "myP"
+    in my web page:
+    */
+    document.getElementById("myH").innerHTML = "My First Page";
+    document.getElementById("myP").innerHTML = "My first paragraph.";
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    let h1Element = document.createElement("p");
+    h1Element.textContent = ["Banana", "Orange", "Peach","Apple", "Pear", "dragonFruit"];
+    
+    let containerElement = document.getElementById("myContainer");
+    containerElement.appendChild(h1Element);
+    
+    let btnElement = document.createElement("button");
+    btnElement.textContent = "Sort fruits in alpa order";
+    containerElement.appendChild(btnElement);
+    
+    btnElement.onclick = function(){
+      h1Element.textContent = ["Banana", "Orange", "Peach","Apple", "Pear", "DragonFruit"].sort()
+      h1Element.classList.add("heading");
+    };
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // program to display text 5 times
+    const n = 5;
+    // looping from i = 1 to 5
+    for (let i in range(n)) {
+        console.log(`I love JavaScript.`);
+    }
+    let person = {
+      firstName: "Rahul",
+      lastName: "Attuluri",
+    };
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    const {firstName,lastName} = person //Object destructuring
+    console.log(person.firstName)
+    console.log(firstName)
+    console.log(person.lastName)
+    console.log(lastName)
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    let hoisting = "present"
+    let bonding = hosting
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //--Use strict mode in your program and understand why variable not declared causes
+    //--solution-->
+    //--> As we know JavaScript is a scripting language,
+    //--> sometimes the JavaScript code displays the correct result even it has some errors.
+    //--> To overcome this issue, we can use the JavaScript strict mode.
+    x = 3.14;       // This will not cause an error.
+    myFunction();
+    
+    function myFunction() {
+      "use strict";
+      y = 3.14;   // This will cause an error
+    }
+  </script>  
+  <div>
+      <div id="myContainer"></div>
+  </div>
+</body>
+
+</html>
